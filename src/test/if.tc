@@ -1,0 +1,37 @@
+int f(int a, int b, int c, int d)
+{
+  if (a < b+1 && b+1 < c || b == 0)
+    return 1;
+  else
+    return 0;
+}
+
+int g(int a, int b, int c, int d)
+{
+  if (a < b && b < c || d)
+    return 1;
+  else
+    return 0;
+}
+
+int h(int x, int y)
+{
+  if (y == 3 && y - x) {
+    if (x == 0 || x+y < x*y)
+      return 1;
+    else
+      return 0;
+  } else
+    return 0;
+}
+
+int test()
+{
+  int a, b, c;
+
+  a = f(1, 2, 4, 3);
+  b = g(1, 2, 3, 0);
+  c = h(2, 3);
+
+  return a + b + c;
+}
